@@ -133,7 +133,7 @@ services:
       - POSTGRES_DB=${DB_DATABASE}
     restart: always
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ./db-data:/var/lib/postgresql/data
     networks:
       - adonisjs
     labels:
@@ -163,7 +163,7 @@ services:
       - adonisjs
   
 volumes:
-  db:
+  db-data:
     driver: local
 ```
 
